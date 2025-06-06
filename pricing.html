@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PlugNPlay IPTV – Pricing</title>
+  <style>
+    /* Same CSS as index.html, plus navbar */
+    * { margin:0; padding:0; box-sizing:border-box }
+    html { font-family:Arial,sans-serif; background:#fff; color:#333 }
+    body { padding:1rem; text-align:center }
+    nav { background:#00AEEF; padding:0.5rem }
+    nav a { color:#fff; margin:0 1rem; text-decoration:none; font-weight:bold }
+    nav a.active { text-decoration:underline }
+    h1 { color:#00AEEF; margin:1rem 0 }
+    .plans { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; }
+    .plan {
+      border:1px solid #ddd; border-radius:8px; width:240px; padding:1rem;
+      box-shadow:0 2px 4px rgba(0,0,0,0.1);
+    }
+    .plan h2 { margin-bottom:0.5rem }
+    .plan .price { font-size:2rem; color:#FF6E1F; margin:0.5rem 0 }
+    .plan p { margin:0.5rem 0 }
+    .plan form { margin-top:1rem }
+    a.btn {
+      display:inline-block; background:#FF6E1F; color:#fff;
+      padding:0.75rem 2rem; border-radius:4px; text-decoration:none;
+      font-weight:bold;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a class="active" href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1>Choose Your Plan</h1>
+  <div class="plans">
+    <!-- Monthly Plan -->
+    <div class="plan">
+      <h2>Monthly Access</h2>
+      <p class="price">$15.00</p>
+      <p>30 days of unlimited IPTV</p>
+      <!-- PayPal Buy Now Button Form -->
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="YOUR_MONTHLY_ID">
+        <input type="image"
+               src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
+               name="submit"
+               alt="Buy Now">
+      </form>
+    </div>
+
+    <!-- Yearly Plan -->
+    <div class="plan">
+      <h2>Yearly Access</h2>
+      <p class="price">$150.00</p>
+      <p>12 months (save 2 months!)</p>
+      <!-- PayPal Buy Now Button Form -->
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="YOUR_YEARLY_ID">
+        <input type="image"
+               src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
+               name="submit"
+               alt="Buy Now">
+      </form>
+    </div>
+  </div>
+
+  <footer style="margin:2rem 0; color:#666">
+    © 2025 PlugNPlay IPTV
+  </footer>
+</body>
+</html>
