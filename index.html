@@ -4,24 +4,92 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PlugNPlay IPTV</title>
+
   <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 2rem; }
-    h1 { color: #00AEEF; }
-    p { color: #333; }
+    /* ===== Global Reset & Base Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #ffffff; /* White background */
+      color: #333333;            /* Default text color */
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    /* ===== Heading (H1) ===== */
+    h1 {
+      font-size: 2.5rem;         /* ~40px on desktop */
+      line-height: 1.2;
+      color: #00AEEF;            /* Electric Blue */
+      margin-bottom: 1rem;
+    }
+
+    /* ===== Key Message Paragraph ===== */
+    .key-message {
+      font-size: 1.25rem;        /* ~20px on desktop */
+      font-weight: 600;          /* Semi-bold */
+      color: #00AEEF;            /* Electric Blue */
+      margin-bottom: 1.5rem;
+      line-height: 1.4;          /* More breathable line spacing */
+    }
+
+    /* ===== Button Link ===== */
     a.btn {
       display: inline-block;
-      background: #FF6E1F;
-      color: white;
-      padding: 0.75rem 1.5rem;
+      font-size: 1rem;           /* ~16px */
+      font-weight: 700;          /* Bold */
+      background-color: #FF6E1F; /* Bright Orange */
+      color: #ffffff;            /* White text */
+      padding: 0.75rem 2rem;     /* Top/bottom: 0.75rem, left/right: 2rem */
       text-decoration: none;
       border-radius: 4px;
-      font-weight: bold;
+      transition: background-color 0.2s ease-in-out;
+      margin-bottom: 2rem;
+    }
+
+    a.btn:hover {
+      background-color: #e65a11; /* Slightly darker orange on hover */
+    }
+
+    /* ===== Responsive Adjustments ===== */
+    @media (min-width: 600px) {
+      h1 {
+        font-size: 3.5rem;       /* ~56px on tablets/desktop */
+      }
+      .key-message {
+        font-size: 1.5rem;       /* ~24px on tablets/desktop */
+      }
+      a.btn {
+        font-size: 1.125rem;     /* ~18px on larger screens */
+        padding: 1rem 2.5rem;    /* Slightly larger padding */
+      }
     }
   </style>
 </head>
 <body>
   <h1>PlugNPlay IPTV</h1>
-  <p>12 000 + Live Channels • PPV • Sports • 8 000 Movies On Demand</p>
-  <p><a class="btn" href="https://plugnplayiptv.com">Visit plugnplayiptv.com</a></p>
+
+  <p class="key-message">
+    12 000+ Live Channels • PPV • Sports • 8 000 Movies On Demand
+  </p>
+
+  <p>
+    <a class="btn" href="https://plugnplayiptv.com">
+      Visit plugnplayiptv.com
+    </a>
+  </p>
 </body>
 </html>
