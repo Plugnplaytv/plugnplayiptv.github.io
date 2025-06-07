@@ -1,16 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>PlugNPlay IPTV</title>
   <style>
     /* ===== Reset & Base ===== */
     * { margin:0; padding:0; box-sizing:border-box }
-    html { font-family:Arial,sans-serif; background:#fff; color:#333 }
-    body { line-height:1.5; padding-top:4rem }
+    html { font-family: Arial, sans-serif; background: #fff; color: #333 }
+    body {
+      line-height: 1.5;
+      padding-top: 5rem; /* make room for logo header (approx 80px) */
+    }
 
- <body>
+    /* ===== Fixed Logo Header Only ===== */
+    header.site-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: #fff;
+      text-align: center;
+      padding: 0.75rem 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 300;
+    }
+    header.site-header .logo {
+      max-height: 80px;
+      height: auto;
+    }
+
+    /* ===== Scrolling Nav Bar ===== */
+    nav.main-nav {
+      background: #00AEEF;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav.main-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0.5rem 0;
+    }
+    nav.main-nav li {
+      margin: 0 1rem;
+    }
+    nav.main-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem;
+    }
+    nav.main-nav a.active,
+    nav.main-nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Sections ===== */
+    section { padding: 2rem 1rem }
+    section h2 { text-align: center; color: #00AEEF; margin-bottom: 1rem }
+
+    /* Hero/About */
+    .hero {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+      padding: 3rem 1rem;
+    }
+    .hero .text {
+      flex: 1 1 300px; max-width: 500px; text-align: left;
+    }
+    .hero h1 { font-size: 2.5rem; color: #00AEEF; margin-bottom: 1rem }
+    .hero p { font-size: 1.25rem; margin-bottom: 1.5rem }
+    .hero .btn {
+      display: inline-block; background: #FF6E1F; color: #fff;
+      padding: 0.75rem 2rem; border-radius: 4px; text-decoration: none;
+      font-weight: bold; margin-right: 1rem;
+    }
+    .hero .btn-alt {
+      display: inline-block; color: #00AEEF; border: 2px solid #00AEEF;
+      padding: 0.75rem 2rem; border-radius: 4px; text-decoration: none;
+      font-weight: bold;
+    }
+    .hero .media {
+      flex: 1 1 300px; text-align: center;
+    }
+    .hero .media img {
+      max-width: 100%; height: auto; border-radius: 8px;
+    }
+
+    /* How It Works */
+    .steps {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;
+    }
+    .step {
+      flex: 1 1 200px; border: 1px solid #ddd;
+      border-radius: 8px; padding: 1rem; text-align: center;
+    }
+    .step h3 { margin-bottom: 0.5rem; color: #00AEEF }
+
+    /* Reviews */
+    .reviews blockquote {
+      max-width: 600px; margin: 1rem auto; font-style: italic;
+      border-left: 4px solid #00AEEF; padding-left: 1rem;
+    }
+    .reviews cite {
+      display: block; text-align: right; margin-top: 0.5rem;
+    }
+
+    /* Channels Grid */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+      gap: 1rem; align-items: center; justify-items: center;
+    }
+    .logo-grid img {
+      max-width: 100px; height: auto; opacity: 0.8;
+    }
+
+    /* Pricing Teaser */
+    .pricing-teaser {
+      background: #f0f8ff; text-align: center; border-radius: 8px;
+      padding: 2rem 1rem; margin: 2rem 0;
+    }
+    .pricing-teaser p { margin-bottom: 1rem }
+
+    /* Support Accordion */
+    details {
+      max-width: 800px; margin: 1rem auto; border: 1px solid #ddd;
+      border-radius: 4px; padding: 0.75rem;
+    }
+    details summary { cursor: pointer; font-weight: bold }
+    details p { margin-top: 0.5rem }
+
+    /* Footer */
+    footer.site-footer {
+      background: #333; color: #ccc; text-align: center;
+      padding: 1.5rem 1rem; font-size: 0.875rem;
+    }
+    footer.site-footer a {
+      color: #ccc; margin: 0 0.5rem; text-decoration: none;
+    }
+    footer.site-footer a:hover { text-decoration: underline }
+
+    /* Responsive */
+    @media(max-width:600px) {
+      .hero { flex-direction: column }
+      nav.main-nav ul { flex-direction: column; align-items: center }
+    }
+  </style>
+</head>
+<body>
+
   <!-- Fixed Logo Header -->
   <header class="site-header">
     <img src="logo.png" alt="PlugNPlay TV Logo" class="logo">
@@ -26,110 +164,6 @@
       <li><a href="#support">Support</a></li>
     </ul>
   </nav>
-header.site-header .logo {
-  max-height: 80px;  /* ← was 40px */
-  height: auto;
-}
-
-/* ===== Push Content Down ===== */
-body {
-  line-height: 1.5;
-  padding-top: 6rem; /* ↑ increase so content sits below the taller header */
-}
-    nav.main-nav a.active,
-    nav.main-nav a:hover { text-decoration:underline }
-
-    /* ===== Sections ===== */
-    section { padding:2rem 1rem }
-    section h2 { text-align:center; color:#00AEEF; margin-bottom:1rem }
-
-    /* Hero */
-    .hero { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; padding:3rem 1rem }
-    .hero .text { flex:1 1 300px; max-width:500px; text-align:left }
-    .hero h1 { font-size:2.5rem; color:#00AEEF; margin-bottom:1rem }
-    .hero p { font-size:1.25rem; margin-bottom:1.5rem }
-    .hero .btn {
-      display:inline-block; background:#FF6E1F; color:#fff;
-      padding:0.75rem 2rem; border-radius:4px; text-decoration:none;
-      font-weight:bold; margin-right:1rem;
-    }
-    .hero .btn-alt {
-      display:inline-block; color:#00AEEF; border:2px solid #00AEEF;
-      padding:0.75rem 2rem; border-radius:4px; text-decoration:none;
-      font-weight:bold;
-    }
-    .hero .media { flex:1 1 300px; text-align:center }
-    .hero .media img { max-width:100%; height:auto; border-radius:8px }
-
-    /* How It Works */
-    .steps { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem }
-    .step {
-      flex:1 1 200px; border:1px solid #ddd;
-      border-radius:8px; padding:1rem; text-align:center;
-    }
-    .step h3 { margin-bottom:0.5rem; color:#00AEEF }
-
-    /* Reviews */
-    .reviews blockquote {
-      max-width:600px; margin:1rem auto; font-style:italic;
-      border-left:4px solid #00AEEF; padding-left:1rem;
-    }
-    .reviews cite { display:block; text-align:right; margin-top:0.5rem }
-
-    /* Channels Grid */
-    .logo-grid {
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-      gap:1rem; align-items:center; justify-items:center;
-    }
-    .logo-grid img { max-width:100px; height:auto; opacity:0.8 }
-
-    /* Pricing Teaser */
-    .pricing-teaser {
-      background:#f0f8ff; text-align:center; border-radius:8px;
-      padding:2rem 1rem; margin:2rem 0;
-    }
-    .pricing-teaser p { margin-bottom:1rem }
-
-    /* Support Accordion */
-    details {
-      max-width:800px; margin:1rem auto; border:1px solid #ddd;
-      border-radius:4px; padding:0.75rem;
-    }
-    details summary { cursor:pointer; font-weight:bold }
-    details p { margin-top:0.5rem }
-
-    /* Footer */
-    footer.site-footer {
-      background:#333; color:#ccc; text-align:center;
-      padding:1.5rem 1rem; font-size:0.875rem;
-    }
-    footer.site-footer a {
-      color:#ccc; margin:0 0.5rem; text-decoration:none;
-    }
-    footer.site-footer a:hover { text-decoration:underline }
-
-    /* Responsive */
-    @media(max-width:600px) {
-      .hero { flex-direction:column }
-      nav.main-nav ul { flex-direction:column; align-items:center }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Logo + Nav -->
-  <header class="site-header">
-    <img src="logo.png" alt="PlugNPlay TV Logo" class="logo">
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#about" class="active">About</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#channels">Channels</a></li>
-        <li><a href="#support">Support</a></li>
-      </ul>
-    </nav>
-  </header>
 
   <!-- Hero / About -->
   <section class="hero" id="about">
@@ -191,7 +225,7 @@ body {
     <a class="btn" href="pricing.html">View All Plans</a>
   </section>
 
-  <!-- Support Preview -->
+  <!-- Support -->
   <section id="support">
     <h2>Support &amp; FAQ</h2>
     <details>
@@ -210,8 +244,8 @@ body {
   <!-- Footer -->
   <footer class="site-footer">
     <div>
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="terms.html">Terms &amp; Conditions</a> | 
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms &amp; Conditions</a> |
       <a href="refund.html">Refund Policy</a>
     </div>
     <p>© 2025 PlugNPlay IPTV</p>
