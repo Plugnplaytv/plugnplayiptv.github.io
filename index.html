@@ -6,35 +6,42 @@
   <title>PlugNPlay IPTV</title>
 
   <style>
-    /* ===== Global & Reset ===== */
-    * { margin:0; padding:0; box-sizing:border-box }
-    html { font-family:Arial,sans-serif; background:#fff; color:#333 }
-    body { line-height:1.5 }
+/* ===== Global & Reset ===== */
+* { margin:0; padding:0; box-sizing:border-box }
+html { font-family:Arial,sans-serif; background:#fff; color:#333 }
+body { line-height:1.5; padding-top:4rem; /* Make room for header+nav */ }
 
-    /* ===== Sticky Header & Nav ===== */
-    header.site-header {
-      position: sticky; top:0; z-index:100;
-      background:#fff; padding:1rem 0;
-      text-align:center; border-bottom:1px solid #eee;
-    }
-    header.site-header img { max-width:180px; height:auto }
+/* ===== Sticky/Fixed Header ===== */
+header.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  z-index: 300;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+header.site-header img { max-width:180px; height:auto }
 
-    nav.main-nav {
-      position: sticky; top:72px; /* below header */
-      background:#00AEEF; box-shadow:0 2px 4px rgba(0,0,0,0.1);
-      z-index: 99;
-    }
-    nav.main-nav ul {
-      display:flex; flex-wrap:wrap; justify-content:center;
-      list-style:none;
-    }
-    nav.main-nav li { margin:0.5rem 1rem }
-    nav.main-nav a {
-      color:#fff; text-decoration:none; font-weight:bold;
-      padding:0.5rem;
-    }
-    nav.main-nav a:hover,
-    nav.main-nav a.active { text-decoration:underline }
+/* ===== Fixed Tab Bar ===== */
+nav.main-nav {
+  position: fixed;      /* Pin to viewport */
+  top: 4rem;            /* Below the header (1rem padding + logo height) */
+  left: 0; right: 0;
+  background: #00AEEF;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 200;
+}
+nav.main-nav ul {
+  display:flex; flex-wrap:wrap; justify-content:center;
+  list-style:none; margin:0; padding:0.5rem 0;
+}
+nav.main-nav li { margin:0 1rem }
+nav.main-nav a {
+  color:#fff; text-decoration:none; font-weight:bold; padding:0.5rem;
+}
+nav.main-nav a:hover,
+nav.main-nav a.active { text-decoration:underline }
 
     /* ===== Hero ===== */
     .hero {
