@@ -4,53 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PlugNPlay IPTV</title>
-
   <style>
-/* ===== Global & Reset ===== */
-* { margin:0; padding:0; box-sizing:border-box }
-html { font-family:Arial,sans-serif; background:#fff; color:#333 }
-body { line-height:1.5; padding-top:4rem; /* Make room for header+nav */ }
+    /* ===== Reset & Base ===== */
+    * { margin:0; padding:0; box-sizing:border-box }
+    html { font-family:Arial,sans-serif; background:#fff; color:#333 }
+    body { line-height:1.5; padding-top:4rem }
 
-/* ===== Sticky/Fixed Header ===== */
-header.site-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  background: #fff;
-  padding: 1rem 0;
-  text-align: center;
-  z-index: 300;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-header.site-header img { max-width:180px; height:auto }
-
-/* ===== Fixed Tab Bar ===== */
-nav.main-nav {
-  position: fixed;      /* Pin to viewport */
-  top: 4rem;            /* Below the header (1rem padding + logo height) */
-  left: 0; right: 0;
-  background: #00AEEF;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  z-index: 200;
-}
-nav.main-nav ul {
-  display:flex; flex-wrap:wrap; justify-content:center;
-  list-style:none; margin:0; padding:0.5rem 0;
-}
-nav.main-nav li { margin:0 1rem }
-nav.main-nav a {
-  color:#fff; text-decoration:none; font-weight:bold; padding:0.5rem;
-}
-nav.main-nav a:hover,
-nav.main-nav a.active { text-decoration:underline }
-
-    /* ===== Hero ===== */
-    .hero {
-      display:flex; flex-wrap:wrap; align-items:center;
-      justify-content:center; padding:3rem 1rem;
+    /* ===== Fixed Header + Nav ===== */
+    header.site-header {
+      position: fixed; top:0; left:0; right:0;
+      background:#fff; display:flex; align-items:center;
+      justify-content:space-between; padding:0.5rem 1rem;
+      box-shadow:0 2px 4px rgba(0,0,0,0.1); z-index:300;
     }
-    .hero .text {
-      flex:1 1 300px; max-width:500px; text-align:left;
+    header.site-header .logo {
+      max-height:40px; height:auto;
     }
+    nav.main-nav ul {
+      display:flex; gap:1rem; list-style:none;
+    }
+    nav.main-nav a {
+      color:#00AEEF; text-decoration:none; font-weight:bold;
+      padding:0.5rem;
+    }
+    nav.main-nav a.active,
+    nav.main-nav a:hover { text-decoration:underline }
+
+    /* ===== Sections ===== */
+    section { padding:2rem 1rem }
+    section h2 { text-align:center; color:#00AEEF; margin-bottom:1rem }
+
+    /* Hero */
+    .hero { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; padding:3rem 1rem }
+    .hero .text { flex:1 1 300px; max-width:500px; text-align:left }
     .hero h1 { font-size:2.5rem; color:#00AEEF; margin-bottom:1rem }
     .hero p { font-size:1.25rem; margin-bottom:1.5rem }
     .hero .btn {
@@ -63,14 +49,8 @@ nav.main-nav a.active { text-decoration:underline }
       padding:0.75rem 2rem; border-radius:4px; text-decoration:none;
       font-weight:bold;
     }
-    .hero .media {
-      flex:1 1 300px; text-align:center;
-    }
-    .hero .media  { max-width:100%; height:auto; border-radius:8px }
-
-    /* ===== Sections ===== */
-    section { padding:2rem 1rem }
-    section h2 { text-align:center; color:#00AEEF; margin-bottom:1rem }
+    .hero .media { flex:1 1 300px; text-align:center }
+    .hero .media img { max-width:100%; height:auto; border-radius:8px }
 
     /* How It Works */
     .steps { display:flex; flex-wrap:wrap; justify-content:center; gap:2rem }
@@ -92,23 +72,21 @@ nav.main-nav a.active { text-decoration:underline }
       display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
       gap:1rem; align-items:center; justify-items:center;
     }
-    .logo-grid  { max-width:100px; height:auto; opacity:0.8; }
+    .logo-grid img { max-width:100px; height:auto; opacity:0.8 }
 
     /* Pricing Teaser */
     .pricing-teaser {
       background:#f0f8ff; text-align:center; border-radius:8px;
       padding:2rem 1rem; margin:2rem 0;
     }
-    .pricing-teaser p { margin-bottom:1rem; }
+    .pricing-teaser p { margin-bottom:1rem }
 
     /* Support Accordion */
     details {
       max-width:800px; margin:1rem auto; border:1px solid #ddd;
       border-radius:4px; padding:0.75rem;
     }
-    details summary {
-      cursor:pointer; font-weight:bold; outline:none;
-    }
+    details summary { cursor:pointer; font-weight:bold }
     details p { margin-top:0.5rem }
 
     /* Footer */
@@ -116,35 +94,35 @@ nav.main-nav a.active { text-decoration:underline }
       background:#333; color:#ccc; text-align:center;
       padding:1.5rem 1rem; font-size:0.875rem;
     }
-    .site-footer a { color:#ccc; margin:0 0.5rem; text-decoration:none }
-    .site-footer a:hover { text-decoration:underline }
+    footer.site-footer a {
+      color:#ccc; margin:0 0.5rem; text-decoration:none;
+    }
+    footer.site-footer a:hover { text-decoration:underline }
 
     /* Responsive */
-    @media(max-width:600px){
+    @media(max-width:600px) {
       .hero { flex-direction:column }
-      nav.main-nav ul { flex-direction:column }
+      nav.main-nav ul { flex-direction:column; align-items:center }
     }
   </style>
 </head>
 <body>
 
-  <!-- Logo -->
+  <!-- Logo + Nav -->
   <header class="site-header">
-   <img src="logo.png" alt="PlugNPlay TV Logo">
+    <img src="logo.png" alt="PlugNPlay TV Logo" class="logo">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#channels">Channels</a></li>
+        <li><a href="#support">Support</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Navigation -->
-  <nav class="main-nav">
-    <ul>
-      <li><a href="#about" class="active">About</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#channels">Channels</a></li>
-      <li><a href="#support">Support</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
+  <!-- Hero / About -->
   <section class="hero" id="about">
     <div class="text">
       <h1>Plug &amp; Play 4K Firestick IPTV</h1>
@@ -153,7 +131,7 @@ nav.main-nav a.active { text-decoration:underline }
       <a class="btn-alt" href="#how-it-works">How It Works</a>
     </div>
     <div class="media">
-      <img src="assets/hero.jpg" alt="Firestick streaming IPTV">
+      <img src="hero.jpg" alt="Firestick streaming IPTV">
     </div>
   </section>
 
@@ -189,11 +167,11 @@ nav.main-nav a.active { text-decoration:underline }
   <section id="channels">
     <h2>Featured Networks</h2>
     <div class="logo-grid">
-      <img src="assets/espn.svg" alt="ESPN">
-      <img src="assets/hbo.svg" alt="HBO">
-      <img src="assets/discovery.svg" alt="Discovery">
-      <img src="assets/sky.svg" alt="Sky">
-      <img src="assets/nbc.svg" alt="NBC">
+      <img src="espn.svg" alt="ESPN">
+      <img src="hbo.svg" alt="HBO">
+      <img src="discovery.svg" alt="Discovery">
+      <img src="sky.svg" alt="Sky">
+      <img src="nbc.svg" alt="NBC">
     </div>
   </section>
 
@@ -215,7 +193,7 @@ nav.main-nav a.active { text-decoration:underline }
       <summary>My remote isn’t pairing.</summary>
       <p>Hold the Home button for 10s until the LED flashes, then follow on-screen pairing prompts.</p>
     </details>
-    <p style="text-align:center; margin-top:1rem;">
+    <p style="text-align:center; margin-top:1rem">
       <a class="btn-alt" href="faq.html">See All FAQs</a>
     </p>
   </section>
@@ -223,8 +201,8 @@ nav.main-nav a.active { text-decoration:underline }
   <!-- Footer -->
   <footer class="site-footer">
     <div>
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="terms.html">Terms &amp; Conditions</a> |
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms &amp; Conditions</a> | 
       <a href="refund.html">Refund Policy</a>
     </div>
     <p>© 2025 PlugNPlay IPTV</p>
