@@ -11,22 +11,22 @@
     body { line-height:1.5; padding-top:4rem }
 
     /* ===== Fixed Header + Nav ===== */
-    header.site-header {
-      position: fixed; top:0; left:0; right:0;
-      background:#fff; display:flex; align-items:center;
-      justify-content:space-between; padding:0.5rem 1rem;
-      box-shadow:0 2px 4px rgba(0,0,0,0.1); z-index:300;
-    }
-    header.site-header .logo {
-      max-height:40px; height:auto;
-    }
-    nav.main-nav ul {
-      display:flex; gap:1rem; list-style:none;
-    }
-    nav.main-nav a {
-      color:#00AEEF; text-decoration:none; font-weight:bold;
-      padding:0.5rem;
-    }
+header.site-header {
+  position: fixed; top: 0; left: 0; right: 0;
+  background: #fff; display: flex; align-items: center;
+  justify-content: space-between; padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); z-index: 300;
+}
+header.site-header .logo {
+  max-height: 80px;  /* ← was 40px */
+  height: auto;
+}
+
+/* ===== Push Content Down ===== */
+body {
+  line-height: 1.5;
+  padding-top: 6rem; /* ↑ increase so content sits below the taller header */
+}
     nav.main-nav a.active,
     nav.main-nav a:hover { text-decoration:underline }
 
