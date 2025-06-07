@@ -4,10 +4,21 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>PlugNPlay IPTV</title>
+  <meta name="description" content="Stream 12,000+ live channels and on-demand movies with our preloaded Firestick IPTV service."/>
+  <meta property="og:title" content="PlugNPlay IPTV"/>
+  <meta property="og:description" content="Watch live TV, sports and movies instantly. Just plug in and start streaming."/>
+  <meta property="og:image" content="https://plugnplayiptv.com/logo.png"/>
+  <meta property="og:url" content="https://plugnplayiptv.com/"/>
+  <link rel="canonical" href="https://plugnplayiptv.com/"/>
+  <link rel="icon" href="logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
   <style>
+   :root { --brand:#00AEEF; --accent:#FF6E1F; }
    /* ===== Reset & Base ===== */
 * { margin:0; padding:0; box-sizing:border-box }
-html { font-family:Arial,sans-serif; background:#fff; color:#333 }
+html { font-family:'Inter',sans-serif; background:#fff; color:#333 }
 body { line-height:1.5; padding-top:8rem; /* room for both header and nav */ }
 
 /* ===== Fixed Logo Header ===== */
@@ -16,6 +27,7 @@ header.site-header {
   background: #fff; text-align: center;
   padding: 0.75rem 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-bottom: 1px solid #eee;
   z-index: 300;
 }
 header.site-header .logo {
@@ -27,7 +39,7 @@ nav.main-nav {
   position: fixed;
   top: calc(0.75rem + 80px + 0.25rem); /* header padding + logo height + a bit of spacing */
   left: 0; right: 0;
-  background: #00AEEF;
+  background: linear-gradient(90deg, var(--brand), #0082c8);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 299;
 }
@@ -44,25 +56,27 @@ nav.main-nav a:hover { text-decoration: underline; }
 
     /* ===== Sections ===== */
     section { padding: 2rem 1rem }
-    section h2 { text-align: center; color: #00AEEF; margin-bottom: 1rem }
+    section h2 { text-align: center; color: var(--brand); margin-bottom: 1rem }
 
     /* Hero/About */
     .hero {
       display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
       padding: 3rem 1rem;
+      background: linear-gradient(135deg, var(--brand), #009dd9);
+      color: #fff;
     }
     .hero .text {
       flex: 1 1 300px; max-width: 500px; text-align: left;
     }
-    .hero h1 { font-size: 2.5rem; color: #00AEEF; margin-bottom: 1rem }
-    .hero p { font-size: 1.25rem; margin-bottom: 1.5rem }
+    .hero h1 { font-size: 2.5rem; color: #fff; margin-bottom: 1rem }
+    .hero p { font-size: 1.25rem; margin-bottom: 1.5rem; color:#f5faff }
     .hero .btn {
-      display: inline-block; background: #FF6E1F; color: #fff;
+      display: inline-block; background: var(--accent); color: #fff;
       padding: 0.75rem 2rem; border-radius: 4px; text-decoration: none;
       font-weight: bold; margin-right: 1rem;
     }
     .hero .btn-alt {
-      display: inline-block; color: #00AEEF; border: 2px solid #00AEEF;
+      display: inline-block; color: #fff; border: 2px solid #fff;
       padding: 0.75rem 2rem; border-radius: 4px; text-decoration: none;
       font-weight: bold;
     }
@@ -80,13 +94,14 @@ nav.main-nav a:hover { text-decoration: underline; }
     .step {
       flex: 1 1 200px; border: 1px solid #ddd;
       border-radius: 8px; padding: 1rem; text-align: center;
+      background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-    .step h3 { margin-bottom: 0.5rem; color: #00AEEF }
+    .step h3 { margin-bottom: 0.5rem; color: var(--brand) }
 
     /* Reviews */
     .reviews blockquote {
       max-width: 600px; margin: 1rem auto; font-style: italic;
-      border-left: 4px solid #00AEEF; padding-left: 1rem;
+      border-left: 4px solid var(--brand); padding-left: 1rem;
     }
     .reviews cite {
       display: block; text-align: right; margin-top: 0.5rem;
@@ -104,8 +119,9 @@ nav.main-nav a:hover { text-decoration: underline; }
 
     /* Pricing Teaser */
     .pricing-teaser {
-      background: #f0f8ff; text-align: center; border-radius: 8px;
+      background: #f3fbff; text-align: center; border-radius: 8px;
       padding: 2rem 1rem; margin: 2rem 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
     .pricing-teaser p { margin-bottom: 1rem }
 
@@ -119,7 +135,7 @@ nav.main-nav a:hover { text-decoration: underline; }
 
     /* Footer */
     footer.site-footer {
-      background: #333; color: #ccc; text-align: center;
+      background: #222; color: #ccc; text-align: center;
       padding: 1.5rem 1rem; font-size: 0.875rem;
     }
     footer.site-footer a {
@@ -161,7 +177,7 @@ nav.main-nav a:hover { text-decoration: underline; }
       <a class="btn-alt" href="#how-it-works">How It Works</a>
     </div>
     <div class="media">
-      <img src="hero.jpg" alt="Firestick streaming IPTV">
+      <img src="https://images.unsplash.com/photo-1593784991094-abd9d7c4bff3?auto=format&fit=crop&w=800&q=80" alt="Streaming on a Firestick">
     </div>
   </section>
 
@@ -197,11 +213,11 @@ nav.main-nav a:hover { text-decoration: underline; }
   <section id="channels">
     <h2>Featured Networks</h2>
     <div class="logo-grid">
-      <img src="espn.svg" alt="ESPN">
-      <img src="hbo.svg" alt="HBO">
-      <img src="discovery.svg" alt="Discovery">
-      <img src="sky.svg" alt="Sky">
-      <img src="nbc.svg" alt="NBC">
+      <img src="https://via.placeholder.com/100x50?text=ESPN" alt="ESPN">
+      <img src="https://via.placeholder.com/100x50?text=HBO" alt="HBO">
+      <img src="https://via.placeholder.com/100x50?text=Discovery" alt="Discovery">
+      <img src="https://via.placeholder.com/100x50?text=Sky" alt="Sky">
+      <img src="https://via.placeholder.com/100x50?text=NBC" alt="NBC">
     </div>
   </section>
 
