@@ -4,7 +4,7 @@
 BRANCH="main"  # or change if you're working from a different branch
 REPO_URL="https://github.com/Plugnplaytv/plugnplayiptv.github.io.git"
 IMAGE_SOURCE_DIR="./new-images"  # folder where you place new .png/.jpg files
-TARGET_DIR="./img"
+TARGET_DIR="./images"
 
 # ---- CLONE & SYNC ----
 echo "Cloning repo..."
