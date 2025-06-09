@@ -15,8 +15,8 @@ body.pricing { font-family:'Inter',sans-serif; }
 header.site-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 16px 24px;
+  justify-content: space-between;
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
   position: sticky;
@@ -30,10 +30,10 @@ header.site-header .logo img {
 
 /* Hamburger toggle button */
 .nav-toggle {
+  display: none;   /* show on mobile */
   background: none;
   border: none;
   cursor: pointer;
-  display: none;            /* hidden on desktop */
   padding: 8px;
 }
 .nav-toggle .hamburger,
@@ -50,17 +50,15 @@ header.site-header .logo img {
 .nav-toggle .hamburger::before { top: -6px; position: absolute; }
 .nav-toggle .hamburger::after  { top:  6px; position: absolute; }
 @media (max-width: 768px) {
-  /* Show hamburger on tablet/mobile */
+  /* Center logo only on homepage */
+  body.home header.site-header {
+    justify-content: center;
+  }
+  /* Show hamburger, hide inline nav */
   .nav-toggle {
     display: block;
   }
-  /* Hide inline links on mobile, reveal via toggle */
-  nav.main-nav {
-    display: flex;
-    justify-content: flex-start;
-    background: var(--brand);
-  }
-  header.site-header .logo { margin-right: auto; }
+  /* nav is off-canvas by default, toggled by JS */
 }
 nav.main-nav {
   flex: 1 1 auto;
@@ -70,14 +68,14 @@ nav.main-nav {
   background: var(--brand);
   position: fixed;
   top: 0;
-  left: -100%;
+  right: -100%;
   width: 75%;
   height: 100%;
   flex-direction: column;
   padding-top: 4rem;
-  transition: left 0.3s ease-in-out;
+  transition: right 0.3s ease-in-out;
 }
-nav.main-nav.open { left: 0; }
+nav.main-nav.open { right: 0; }
 nav.main-nav a {
   color: #fff;
   font-size: 1.25rem;

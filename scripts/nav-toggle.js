@@ -1,15 +1,18 @@
-// Toggle mobile navigation drawer
-document.addEventListener("DOMContentLoaded", function() {
-  const btn = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.main-nav');
+// scripts/nav-toggle.js
 
-  btn.addEventListener('click', () => {
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.nav-toggle');
+  const nav    = document.querySelector('.main-nav');
+
+  if (!toggle || !nav) return;
+
+  toggle.addEventListener('click', () => {
     nav.classList.toggle('open');
-    btn.classList.toggle('open');
+    toggle.classList.toggle('open');
   });
 
-  // Optionally close nav when a link is clicked
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => nav.classList.remove('open'));
-  });
+  // Close menu after clicking a link
+  nav.querySelectorAll('a').forEach(link =>
+    link.addEventListener('click', () => nav.classList.remove('open'))
+  );
 });
