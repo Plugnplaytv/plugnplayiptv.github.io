@@ -14,7 +14,8 @@ header.site-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  /* Center logo on homepage, space-between on other pages */
+  justify-content: center;
   padding: 16px 32px;
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
@@ -35,6 +36,7 @@ header.site-header .logo img {
   nav.main-nav a { margin: 4px 0; }
 }
 nav.main-nav {
+  /* Make nav flexible and evenly spaced on non-home pages */
   flex: 1 1 auto;
   display: flex;
   justify-content: space-evenly;
