@@ -147,7 +147,7 @@ section h2 { text-align: center; color: var(--brand); margin-bottom: 1rem }
 }
 .section-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.25rem;
   color: var(--brand);
   margin-bottom: 2rem;
 }
@@ -191,6 +191,29 @@ section h2 { text-align: center; color: var(--brand); margin-bottom: 1rem }
 }
 .logo-grid img {
   max-width: 100px; height: auto; opacity: 0.8;
+}
+
+.channels-section {
+  padding: 4rem 1rem;
+  background: #f3fbff;
+}
+.channel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+}
+.channel-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 /* Pricing Teaser */
