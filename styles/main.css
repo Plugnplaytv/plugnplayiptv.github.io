@@ -20,6 +20,10 @@ header.site-header {
   border-bottom: 1px solid #eee;
   z-index: 300;
 }
+header.site-header .logo {
+  display: flex;
+  align-items: center;
+}
 header.site-header .logo img {
   max-height: 80px;
   height: auto;
