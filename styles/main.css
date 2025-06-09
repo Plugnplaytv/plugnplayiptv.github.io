@@ -229,6 +229,32 @@ footer.site-footer a:hover { text-decoration: underline }
 .plan-toggle .toggle-btn.active {
   background: var(--accent);
 }
+
+/* Renewal Rates Toggle */
+.renewal-toggle {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.renewal-toggle .renewal-btn {
+  background: #fff;
+  border: 1px solid var(--brand);
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background .2s, color .2s;
+}
+.renewal-toggle .renewal-btn.active {
+  background: var(--brand);
+  color: #fff;
+}
+.renewal-rate {
+  display: none;
+  color: var(--accent);
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
 .plan-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

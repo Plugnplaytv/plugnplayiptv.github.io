@@ -17,4 +17,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const active = document.querySelector('.toggle-btn.active');
   if (active) showCards(active.dataset.duration);
+
+  // Renewal rates toggle
+  document.querySelectorAll('.renewal-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.renewal-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const show = btn.dataset.renewal === 'on';
+      document.querySelectorAll('.renewal-rate').forEach(el => {
+        el.style.display = show ? 'inline' : 'none';
+      });
+    });
+  });
 });
