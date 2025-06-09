@@ -26,154 +26,120 @@
     </nav>
   </header>
 
-  <h1>Choose Your Plan</h1>
-  <img src="images/price-lists.png" alt="Price List" style="max-width:100%;height:auto;margin:1rem 0">
-  <div class="plans">
-    <!-- 6-Month Plans -->
-    <div class="plan">
-      <h2>6 Months – 1 Device</h2>
-      <p class="price">$210</p>
-      <!-- PayPal Buy Now Button Form -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ID_6M1">
-        <input type="image"
-               src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
-               name="submit"
-               alt="Buy Now">
-      </form>
-    </div>
+  <main role="main">
+    <section class="pricing-plans">
+      <h1 class="section-title">Choose Your Plan</h1>
+      <p class="section-subtitle">All Premium Channels, PPV &amp; Sports Pass Included • No Hidden Fees</p>
 
-    <div class="plan">
-      <h2>6 Months – 2 Devices</h2>
-      <p class="price">$405</p>
-      <!-- PayPal Buy Now Button Form -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ID_6M2">
-        <input type="image"
-               src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
-               name="submit"
-               alt="Buy Now">
-      </form>
-    </div>
+      <div class="plan-toggle">
+        <button class="toggle-btn active" data-duration="6">6 Months</button>
+        <button class="toggle-btn" data-duration="12">12 Months</button>
+      </div>
 
-    <div class="plan">
-      <h2>6 Months – 3 Devices</h2>
-      <p class="price">$599</p>
-      <!-- PayPal Buy Now Button Form -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ID_6M3">
-        <input type="image"
-               src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
-               name="submit"
-               alt="Buy Now">
-      </form>
-    </div>
+      <div class="plan-grid">
+        <div class="plan-card" data-duration="6">
+          <h3>1 Device</h3>
+          <p class="price">$210</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="ID_6M1">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
+          </form>
+        </div>
+        <div class="plan-card" data-duration="6">
+          <h3>2 Devices</h3>
+          <p class="price">$405</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="ID_6M2">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
+          </form>
+        </div>
+        <div class="plan-card" data-duration="6">
+          <h3>3 Devices</h3>
+          <p class="price">$599</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="ID_6M3">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
+          </form>
+        </div>
+        <div class="plan-card" data-duration="6">
+          <h3>4 Devices <small>(5% off)</small></h3>
+          <p class="price">$760</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="ID_6M4">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
+          </form>
+        </div>
+        <div class="plan-card" data-duration="6">
+          <h3>5 Devices <small>(10% off)</small></h3>
+          <p class="price">$900</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="ID_6M5">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
+          </form>
+        </div>
 
-    <div class="plan">
-      <h2>6 Months – 4 Devices (5% Discount)</h2>
-      <p class="price">$760</p>
-      <!-- PayPal Buy Now Button Form -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ID_6M4">
-        <input type="image"
-               src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
-               name="submit"
-               alt="Buy Now">
-      </form>
-    </div>
+        <div class="plan-card" data-duration="12">
+          <h3>1 Device</h3>
+          <p class="price">$250</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="ID_1Y1">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
+          </form>
+        </div>
+        <div class="plan-card" data-duration="12">
+          <h3>2 Devices</h3>
+          <p class="price">$455</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="ID_1Y2">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
+          </form>
+        </div>
+        <div class="plan-card" data-duration="12">
+          <h3>3 Devices</h3>
+          <p class="price">$655</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="ID_1Y3">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
+          </form>
+        </div>
+        <div class="plan-card" data-duration="12">
+          <h3>4 Devices <small>(5% off)</small></h3>
+          <p class="price">$790</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="ID_1Y4">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
+          </form>
+        </div>
+        <div class="plan-card" data-duration="12">
+          <h3>5 Devices <small>(10% off)</small></h3>
+          <p class="price">$935</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="ID_1Y5">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <div class="plan">
-      <h2>6 Months – 5 Devices (10% Discount)</h2>
-      <p class="price">$900</p>
-      <!-- PayPal Buy Now Button Form -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ID_6M5">
-        <input type="image"
-               src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
-               name="submit"
-               alt="Buy Now">
-      </form>
+  <footer class="site-footer">
+    <div>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms &amp; Conditions</a> |
+      <a href="refund.html">Refund Policy</a>
     </div>
-
-    <!-- Yearly Plans -->
-    <div class="plan">
-      <h2>1 Year – 1 Device</h2>
-      <p class="price">$250</p>
-      <!-- PayPal Buy Now Button Form -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ID_1Y1">
-        <input type="image"
-               src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
-               name="submit"
-               alt="Buy Now">
-      </form>
-    </div>
-
-    <div class="plan">
-      <h2>1 Year – 2 Devices</h2>
-      <p class="price">$455</p>
-      <!-- PayPal Buy Now Button Form -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ID_1Y2">
-        <input type="image"
-               src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
-               name="submit"
-               alt="Buy Now">
-      </form>
-    </div>
-
-    <div class="plan">
-      <h2>1 Year – 3 Devices</h2>
-      <p class="price">$655</p>
-      <!-- PayPal Buy Now Button Form -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ID_1Y3">
-        <input type="image"
-               src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
-               name="submit"
-               alt="Buy Now">
-      </form>
-    </div>
-
-    <div class="plan">
-      <h2>1 Year – 4 Devices(5% Discount)</h2>
-      <p class="price">$790</p>
-      <!-- PayPal Buy Now Button Form -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ID_1Y4">
-        <input type="image"
-               src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
-               name="submit"
-               alt="Buy Now">
-      </form>
-    </div>
-
-    <div class="plan">
-      <h2>1 Year – 5 Devices(10% Discount)</h2>
-      <p class="price">$935</p>
-      <!-- PayPal Buy Now Button Form -->
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ID_1Y5">
-        <input type="image"
-               src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
-               name="submit"
-               alt="Buy Now">
-      </form>
-    </div>
-  </div>
-
-  <footer style="margin:2rem 0; color:#666">
-    © 2025 PlugNPlay IPTV
+    <p>© 2025 PlugNPlay IPTV</p>
   </footer>
+  <script src="scripts/pricing-toggle.js"></script>
 </body>
 </html>
