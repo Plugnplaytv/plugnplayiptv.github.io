@@ -200,80 +200,96 @@ footer.site-footer a:hover { text-decoration: underline }
 
 /* ===== Pricing Plans ===== */
 .pricing-plans {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
   text-align: center;
+  padding: 4rem 1rem;
 }
 .pricing-plans .section-title {
+  font-size: 2.5rem;
   color: var(--brand);
   margin-bottom: 0.5rem;
 }
 .pricing-plans .section-subtitle {
-  color: #666;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
 }
+
 .plan-toggle {
-  margin: 1rem 0 2rem;
+  display: inline-flex;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 2rem;
 }
 .plan-toggle .toggle-btn {
-  background: var(--brand);
+  background: #fff;
   border: none;
-  color: #fff;
-  padding: 0.5rem 1.25rem;
-  margin: 0 0.25rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
   cursor: pointer;
-  border-radius: 4px;
-  font-weight: bold;
+  transition: background .2s, color .2s;
 }
 .plan-toggle .toggle-btn.active {
   background: var(--accent);
-}
-
-/* Renewal Rates Toggle */
-.renewal-toggle {
-  text-align: center;
-  margin: 1.5rem 0;
-}
-.renewal-toggle .renewal-btn {
-  background: #fff;
-  border: 1px solid var(--brand);
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background .2s, color .2s;
-}
-.renewal-toggle .renewal-btn.active {
-  background: var(--brand);
   color: #fff;
 }
-.renewal-rate {
-  display: none;
-  color: var(--accent);
-  font-weight: bold;
-  margin-left: 0.5rem;
-}
+
 .plan-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
   gap: 1.5rem;
 }
 .plan-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: relative;
   background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.plan-card h3 {
-  margin-bottom: .5rem;
+.plan-card .badge {
+  position: absolute;
+  top: -10px; right: -10px;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.plan-card h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: var(--brand);
 }
 .plan-card .price {
-  font-size: 1.5rem;
-  color: var(--accent);
+  font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 1rem;
+}
+.plan-card .features {
+  list-style: none;
+  text-align: left;
+  margin: 1rem 0 2rem;
+  flex-grow: 1;
+}
+.plan-card .features li {
+  margin-bottom: 0.5rem;
+}
+.plan-card .btn-primary {
+  background: var(--brand);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .2s;
+}
+.plan-card .btn-primary:hover {
+  background: #008ecf;
 }
 
 /* ===== Simple Pages ===== */
