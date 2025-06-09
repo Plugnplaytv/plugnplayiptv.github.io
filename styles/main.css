@@ -81,10 +81,17 @@ nav.main-nav a {
   font-size: 18px;
   font-weight: 600;
   padding: 0.5rem 1rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
   text-decoration: none;
 }
 nav.main-nav a.active {
   color: var(--accent);
+}
+/* Nav tab hover color */
+nav.main-nav a:hover {
+  color: var(--accent);
+  background-color: rgba(255,110,31,0.1);
+  border-radius: 4px;
 }
 /* ===== Sections ===== */
 section { padding: 2rem 1rem }
