@@ -11,8 +11,8 @@ body.home { font-family:'Inter',sans-serif; }
 /* ===== Fixed Logo Header ===== */
 header.site-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   padding: 16px 32px;
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
@@ -28,15 +28,19 @@ header.site-header .logo img {
 @media (max-width: 768px) {
   header.site-header .logo img { max-height: 60px; }
 }
+nav.main-nav {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+}
 nav.main-nav a {
-  margin-left: 24px;
+  margin: 0;
   font-size: 18px;
   font-weight: 500;
   color: #333;
   text-decoration: none;
   transition: color .2s;
 }
-nav.main-nav a:first-child { margin-left: 0; }
 nav.main-nav a:hover {
   color: #007AFF;
 }
