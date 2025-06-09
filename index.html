@@ -19,18 +19,21 @@
 <body class="home">
 
   <!-- Site Header -->
-  <header class="site-header">
-    <div class="logo">
-      <a href="/"><img src="images/logo.png" alt="PlugNPlay IPTV"></a>
-    </div>
-    <nav class="main-nav">
-      <a href="#about">About</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#channels">Channels</a>
-      <a href="#support">Support</a>
-    </nav>
-  </header>
+  .site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: #fff; /* or your brand color */
+  border-bottom: 1px solid #e5e5e5;
+}
+.logo img {
+  max-height: 80px;
+  width: auto;
+}
+@media (max-width: 768px) {
+  .logo img { max-height: 60px; }
+}
 
   <!-- Hero / About -->
   <section class="hero" id="about">
