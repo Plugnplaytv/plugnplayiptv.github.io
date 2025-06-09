@@ -5,11 +5,12 @@
   <button class="nav-toggle" aria-label="Toggle navigation">
     <span class="hamburger"></span>
   </button>
-  <nav class="main-nav">
-    <a href="pricing.html"  class="{% if page.url == '/pricing.html'  %}active{% endif %}">Pricing</a>
-    <a href="reviews.html"  class="{% if page.url == '/reviews.html'  %}active{% endif %}">Reviews</a>
-    <a href="channels.html" class="{% if page.url == '/channels.html' %}active{% endif %}">Channels</a>
-    <a href="faq.html"      class="{% if page.url == '/faq.html'      %}active{% endif %}">FAQ</a>
-    <a href="contact.html"  class="{% if page.url == '/contact.html'  %}active{% endif %}">Contact</a>
-  </nav>
-</header>
+    <nav class="main-nav">
+      <a href="index.html"   class="{% if page.url == '/index.html' or page.url == '/' %}active{% endif %}">Home</a>
+      <a href="pricing.html"  class="{% if page.url == '/pricing.html'  %}active{% endif %}">Pricing</a>
+      <a href="reviews.html"  class="{% if page.url == '/reviews.html'  %}active{% endif %}">Reviews</a>
+      <a href="channels.html" class="{% if page.url == '/channels.html' %}active{% endif %}">Channels</a>
+      <a href="faq.html"      class="{% if page.url == '/faq.html'      %}active{% endif %}">FAQ</a>
+      <a href="contact.html"  class="{% if page.url == '/contact.html'  %}active{% endif %}">Contact</a>
+    </nav>
+  </header>
