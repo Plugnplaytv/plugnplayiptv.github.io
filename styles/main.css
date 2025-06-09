@@ -26,8 +26,21 @@ header.site-header .logo img {
   width: auto;
 }
 @media (max-width: 768px) {
-  header.site-header .logo img { max-height: 60px; }
-  nav.main-nav { display: none; /* reveal via your hamburger toggle script */ }
+  header.site-header {
+    padding: 8px 12px;
+  }
+
+  /* Shrink logo slightly */
+  header.site-header .logo img {
+    max-height: 60px;
+  }
+
+  /* Smaller, tighter nav links */
+  nav.main-nav a {
+    font-size: 14px;
+    margin: 0 8px;
+    padding: 4px 0;
+  }
 }
 nav.main-nav {
   flex: 1 1 auto;
