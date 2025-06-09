@@ -25,102 +25,122 @@
         <button class="toggle-btn active" data-duration="6">6 Months</button>
         <button class="toggle-btn" data-duration="12">12 Months</button>
       </div>
-      <div class="renewal-toggle">
-        <button class="toggle-btn renewal-btn active" data-renewal="off">Hide Renewal Rates</button>
-        <button class="toggle-btn renewal-btn" data-renewal="on">Show Renewal Rates</button>
-      </div>
 
       <div class="plan-grid">
+        <!-- 6-month cards -->
         <div class="plan-card" data-duration="6">
-          <h3>1 Device</h3>
-          <p class="price">$210 <span class="renewal-rate">Renewal at $20.99/mo</span></p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="ID_6M1">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
-          </form>
+          <div class="badge">Recommended</div>
+          <h2>1 Device</h2>
+          <div class="price">$210</div>
+          <ul class="features">
+            <li>All Premium Channels</li>
+            <li>PPV Included</li>
+            <li>NFL, NBA &amp; UFC Pass</li>
+            <li>Local Networks</li>
+          </ul>
+          <a href="/checkout?plan=6-1" class="btn btn-primary">Choose Plan</a>
         </div>
         <div class="plan-card" data-duration="6">
-          <h3>2 Devices</h3>
-          <p class="price">$405 <span class="renewal-rate">Renewal at $20.99/mo</span></p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="ID_6M2">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
-          </form>
+          <h2>2 Devices</h2>
+          <div class="price">$245</div>
+          <ul class="features">
+            <li>All Premium Channels</li>
+            <li>PPV Included</li>
+            <li>NFL, NBA &amp; UFC Pass</li>
+            <li>Local Networks</li>
+          </ul>
+          <a href="/checkout?plan=6-2" class="btn btn-primary">Choose Plan</a>
         </div>
         <div class="plan-card" data-duration="6">
-          <h3>3 Devices</h3>
-          <p class="price">$599 <span class="renewal-rate">Renewal at $20.99/mo</span></p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="ID_6M3">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
-          </form>
+          <h2>3 Devices</h2>
+          <div class="price">$285</div>
+          <ul class="features">
+            <li>All Premium Channels</li>
+            <li>PPV Included</li>
+            <li>NFL, NBA &amp; UFC Pass</li>
+            <li>Local Networks</li>
+          </ul>
+          <a href="/checkout?plan=6-3" class="btn btn-primary">Choose Plan</a>
         </div>
         <div class="plan-card" data-duration="6">
-          <h3>4 Devices <small>(5% off)</small></h3>
-          <p class="price">$760 <span class="renewal-rate">Renewal at $20.99/mo</span></p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="ID_6M4">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
-          </form>
+          <h2>4 Devices</h2>
+          <div class="price">$325</div>
+          <ul class="features">
+            <li>All Premium Channels</li>
+            <li>PPV Included</li>
+            <li>NFL, NBA &amp; UFC Pass</li>
+            <li>Local Networks</li>
+          </ul>
+          <a href="/checkout?plan=6-4" class="btn btn-primary">Choose Plan</a>
         </div>
         <div class="plan-card" data-duration="6">
-          <h3>5 Devices <small>(10% off)</small></h3>
-          <p class="price">$900 <span class="renewal-rate">Renewal at $20.99/mo</span></p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="ID_6M5">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
-          </form>
+          <h2>5 Devices</h2>
+          <div class="price">$365</div>
+          <ul class="features">
+            <li>All Premium Channels</li>
+            <li>PPV Included</li>
+            <li>NFL, NBA &amp; UFC Pass</li>
+            <li>Local Networks</li>
+          </ul>
+          <a href="/checkout?plan=6-5" class="btn btn-primary">Choose Plan</a>
         </div>
 
-        <div class="plan-card" data-duration="12">
-          <h3>1 Device</h3>
-          <p class="price">$250 <span class="renewal-rate">Renewal at $18.50/mo</span></p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="ID_1Y1">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
-          </form>
+        <!-- 12-month cards (hidden by default) -->
+        <div class="plan-card" data-duration="12" style="display:none">
+          <div class="badge">Recommended</div>
+          <h2>1 Device</h2>
+          <div class="price">$350</div>
+          <ul class="features">
+            <li>All Premium Channels</li>
+            <li>PPV Included</li>
+            <li>NFL, NBA &amp; UFC Pass</li>
+            <li>Local Networks</li>
+          </ul>
+          <a href="/checkout?plan=12-1" class="btn btn-primary">Choose Plan</a>
         </div>
-        <div class="plan-card" data-duration="12">
-          <h3>2 Devices</h3>
-          <p class="price">$455 <span class="renewal-rate">Renewal at $18.50/mo</span></p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="ID_1Y2">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
-          </form>
+        <div class="plan-card" data-duration="12" style="display:none">
+          <h2>2 Devices</h2>
+          <div class="price">$415</div>
+          <ul class="features">
+            <li>All Premium Channels</li>
+            <li>PPV Included</li>
+            <li>NFL, NBA &amp; UFC Pass</li>
+            <li>Local Networks</li>
+          </ul>
+          <a href="/checkout?plan=12-2" class="btn btn-primary">Choose Plan</a>
         </div>
-        <div class="plan-card" data-duration="12">
-          <h3>3 Devices</h3>
-          <p class="price">$655 <span class="renewal-rate">Renewal at $18.50/mo</span></p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="ID_1Y3">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
-          </form>
+        <div class="plan-card" data-duration="12" style="display:none">
+          <h2>3 Devices</h2>
+          <div class="price">$475</div>
+          <ul class="features">
+            <li>All Premium Channels</li>
+            <li>PPV Included</li>
+            <li>NFL, NBA &amp; UFC Pass</li>
+            <li>Local Networks</li>
+          </ul>
+          <a href="/checkout?plan=12-3" class="btn btn-primary">Choose Plan</a>
         </div>
-        <div class="plan-card" data-duration="12">
-          <h3>4 Devices <small>(5% off)</small></h3>
-          <p class="price">$790 <span class="renewal-rate">Renewal at $18.50/mo</span></p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="ID_1Y4">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
-          </form>
+        <div class="plan-card" data-duration="12" style="display:none">
+          <h2>4 Devices</h2>
+          <div class="price">$535</div>
+          <ul class="features">
+            <li>All Premium Channels</li>
+            <li>PPV Included</li>
+            <li>NFL, NBA &amp; UFC Pass</li>
+            <li>Local Networks</li>
+          </ul>
+          <a href="/checkout?plan=12-4" class="btn btn-primary">Choose Plan</a>
         </div>
-        <div class="plan-card" data-duration="12">
-          <h3>5 Devices <small>(10% off)</small></h3>
-          <p class="price">$935 <span class="renewal-rate">Renewal at $18.50/mo</span></p>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="ID_1Y5">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="Buy Now">
-          </form>
+        <div class="plan-card" data-duration="12" style="display:none">
+          <h2>5 Devices</h2>
+          <div class="price">$595</div>
+          <ul class="features">
+            <li>All Premium Channels</li>
+            <li>PPV Included</li>
+            <li>NFL, NBA &amp; UFC Pass</li>
+            <li>Local Networks</li>
+          </ul>
+          <a href="/checkout?plan=12-5" class="btn btn-primary">Choose Plan</a>
         </div>
       </div>
     </section>
