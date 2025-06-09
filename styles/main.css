@@ -7,15 +7,16 @@ body { line-height:1.5; font-family:Arial,sans-serif }
 
 /* ===== Home Page Overrides ===== */
 body.home { font-family:'Inter',sans-serif; }
+body.home .nav-toggle,
+body.home nav.main-nav { display: none; }
 body.pricing { font-family:'Inter',sans-serif; }
 
 /* ===== Fixed Logo Header ===== */
 header.site-header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: 16px 32px;
+  justify-content: space-between;
+  padding: 16px 24px;
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
   position: sticky;
@@ -26,35 +27,62 @@ header.site-header .logo img {
   max-height: 80px;
   width: auto;
 }
+
+/* Hamburger toggle button */
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;            /* hidden on desktop */
+  padding: 8px;
+}
+.nav-toggle .hamburger,
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: var(--brand);
+  border-radius: 2px;
+  position: relative;
+}
+.nav-toggle .hamburger::before { top: -6px; position: absolute; }
+.nav-toggle .hamburger::after  { top:  6px; position: absolute; }
 @media (max-width: 768px) {
-  header.site-header .logo img { max-height: 60px; }
-  nav.main-nav {
-    flex-direction: column;
-    align-items: stretch;
+  /* Show hamburger on tablet/mobile */
+  .nav-toggle {
+    display: block;
   }
-  nav.main-nav a { margin: 4px 0; }
+  /* Hide inline links on mobile, reveal via toggle */
+  nav.main-nav {
+    display: flex;
+    justify-content: flex-start;
+    background: var(--brand);
+  }
+  header.site-header .logo { margin-right: auto; }
 }
 nav.main-nav {
   flex: 1 1 auto;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
-  margin-top: 8px;
-  padding: 8px 16px;
   background: var(--brand);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 4px;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 75%;
+  height: 100%;
+  flex-direction: column;
+  padding-top: 4rem;
+  transition: left 0.3s ease-in-out;
 }
+nav.main-nav.open { left: 0; }
 nav.main-nav a {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 500;
   color: #fff;
-  padding: 6px 12px;
+  font-size: 1.25rem;
+  margin: 1rem 0;
   text-decoration: none;
-  border-radius: 4px;
-  transition: background-color .2s;
 }
 nav.main-nav a:hover {
   background: rgba(255,255,255,0.2);
