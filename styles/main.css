@@ -74,14 +74,6 @@ nav.main-nav {
   .nav-toggle {
     display: block;
   }
-  /* On homepage, center logo and hide nav-toggle/nav */
-  body.home header.site-header {
-    justify-content: center;
-  }
-  body.home .nav-toggle,
-  body.home nav.main-nav {
-    display: none;
-  }
 }
 
 nav.main-nav a {
