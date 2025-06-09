@@ -70,16 +70,19 @@ nav.main-nav a:hover { text-decoration: underline; }
     }
     .hero h1 { font-size: 2.5rem; color: #fff; margin-bottom: 1rem }
     .hero p { font-size: 1.25rem; margin-bottom: 1.5rem; color:#f5faff }
-    .hero .btn {
+    /* Generic Buttons */
+    .btn {
       display: inline-block; background: var(--accent); color: #fff;
-      padding: 0.75rem 2rem; border-radius: 4px; text-decoration: none;
-      font-weight: bold; margin-right: 1rem;
-    }
-    .hero .btn-alt {
-      display: inline-block; color: #fff; border: 2px solid #fff;
       padding: 0.75rem 2rem; border-radius: 4px; text-decoration: none;
       font-weight: bold;
     }
+    .btn-alt {
+      display: inline-block; border: 2px solid var(--accent); color: var(--accent);
+      padding: 0.75rem 2rem; border-radius: 4px; text-decoration: none;
+      font-weight: bold;
+    }
+    .hero .btn { margin-right: 1rem; }
+    .hero .btn-alt { border-color: #fff; color: #fff; }
     .hero .media {
       flex: 1 1 300px; text-align: center;
     }
@@ -155,6 +158,10 @@ nav.main-nav a:hover { text-decoration: underline; }
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
     .pricing-teaser p { margin-bottom: 1rem }
+    .pricing-teaser .btn {
+      font-size: 1.25rem; padding: 1rem 2.5rem; border-radius: 50px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
 
     /* Support Accordion */
     details {
@@ -210,6 +217,11 @@ nav.main-nav a:hover { text-decoration: underline; }
     <div class="media">
       <img src="images/home-page-catch.png" alt="Streaming on a Firestick">
     </div>
+  </section>
+
+  <!-- Pricing Teaser -->
+  <section class="pricing-teaser" id="pricing">
+    <a class="btn" href="pricing.html">View All Plans</a>
   </section>
 
   <!-- How It Works -->
@@ -287,10 +299,6 @@ nav.main-nav a:hover { text-decoration: underline; }
     </div>
   </section>
 
-  <!-- Pricing Teaser -->
-  <section class="pricing-teaser" id="pricing">
-    <a class="btn" href="pricing.html">View All Plans</a>
-  </section>
 
   <!-- Support -->
   <section id="support">
