@@ -2,14 +2,16 @@
   <div class="logo">
     <a href="/"><img src="/images/logo.png" alt="PlugNPlay IPTV"></a>
   </div>
-  {% if page.url != '/' and page.url != '/index.html' %}
+  {% unless page.url == "/" or page.url == "/index.html" %}
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    <span class="hamburger"></span>
+  </button>
   <nav class="main-nav">
-    <a href="/about"    class="{{ page.url == '/about'    and 'active' }}">About</a>
-    <a href="/pricing"  class="{{ page.url == '/pricing'  and 'active' }}">Pricing</a>
-    <a href="/reviews"  class="{{ page.url == '/reviews'  and 'active' }}">Reviews</a>
-    <a href="/channels" class="{{ page.url == '/channels' and 'active' }}">Channels</a>
-    <a href="/support"  class="{{ page.url == '/support'  and 'active' }}">Support</a>
+    <a href="/about"    class="{% if page.url == '/about'    %}active{% endif %}">About</a>
+    <a href="/pricing"  class="{% if page.url == '/pricing'  %}active{% endif %}">Pricing</a>
+    <a href="/reviews"  class="{% if page.url == '/reviews'  %}active{% endif %}">Reviews</a>
+    <a href="/channels" class="{% if page.url == '/channels' %}active{% endif %}">Channels</a>
+    <a href="/support"  class="{% if page.url == '/support'  %}active{% endif %}">Support</a>
   </nav>
-  {% endif %}
+  {% endunless %}
 </header>
-

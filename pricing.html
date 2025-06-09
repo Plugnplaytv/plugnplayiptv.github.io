@@ -17,18 +17,7 @@
   <link rel="stylesheet" href="styles/main.css"/>
 </head>
   <body class="pricing">
-  <header class="site-header">
-    <div class="logo">
-      <a href="index.html"><img src="images/logo.png" alt="PlugNPlay IPTV"></a>
-    </div>
-    <nav class="main-nav">
-      <a href="index.html#about">About</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="reviews.html">Reviews</a>
-      <a href="index.html#channels">Channels</a>
-      <a href="index.html#support">Support</a>
-    </nav>
-  </header>
+  {% include header.html %}
 
   <main role="main">
     <section class="pricing-plans">
@@ -169,6 +158,7 @@
     </div>
     <p>© 2025 PlugNPlay IPTV</p>
   </footer>
+  <script src="scripts/nav-toggle.js"></script>
   <script src="scripts/pricing-toggle.js"></script>
 </body>
 </html>
